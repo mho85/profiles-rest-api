@@ -122,6 +122,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
+
 # Overrides default user model
 
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
