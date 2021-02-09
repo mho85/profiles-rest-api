@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = '5$!)adw&rzu&b01!du4$!6@0vzt+ks@3&z5*_g!fxcs&*2h_2q'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = bool(int(os.environ.get('DEBUG', 1)))
 
 ALLOWED_HOSTS = []
 
@@ -126,3 +126,7 @@ STATIC_URL = '/static/'
 # Overrides default user model
 
 AUTH_USER_MODEL = 'profiles_api.UserProfile'
+
+
+# Static root
+STATIC_ROOT = 'static/'
